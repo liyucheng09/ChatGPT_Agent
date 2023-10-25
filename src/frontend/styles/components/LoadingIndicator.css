@@ -1,0 +1,36 @@
+.loading-indicator-container {
+  position: relative;
+  height: 100%;
+}
+
+.loading-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #7289da;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+.loading-text {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

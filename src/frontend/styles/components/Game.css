@@ -1,0 +1,26 @@
+.canvas-chat-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  border: 1px solid black;
+  border-width: 4px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.canvas-container {
+  flex: 1 1 50%; /* initial size of 50%, but can shrink if necessary */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: red;
+  min-width: 800px;
+}
+
+.chat-container {
+  flex: 1 0 50%; /* initial size of 50%, but can shrink if necessary */
+  background-color: blue;
+  min-width: 800px;
+}

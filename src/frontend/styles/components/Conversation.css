@@ -1,0 +1,120 @@
+.conversation {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+  background-color: #36393f;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center; /* center child elements vertically */
+  justify-content: end;
+}
+
+.conversation__messages {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #36393f; /* Set the background color of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7289da; /* Set the color of the scrollbar thumb */
+}
+
+.conversation__bubble {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  max-width: 80%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.conversation__bubble--me {
+  align-self: flex-end;
+  background-color: #7289da;
+}
+
+.conversation__bubble--other {
+  align-self: flex-start;
+  background-color: #2f3136;
+}
+
+.conversation__bubble--system {
+  align-self: center;
+  color: lightcoral
+}
+
+.conversation__input {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #2f3136;
+  /* border-top: 1px solid #36393f; */
+}
+
+.conversation__buttons {
+  display: flex;
+  flex: 1;
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.conversation__input input {
+  flex: 1;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #40444b;
+  color: #fff;
+}
+
+.conversation__input textarea {
+  flex-grow: 4;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  height: 64px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #40444b;
+  color: #fff;
+  resize: none;
+  overflow-y: scroll;
+}
+
+.conversation__input ::-webkit-scrollbar {
+  width: 10px;
+  background-color: #40444b; /* Set the background color of the scrollbar */
+}
+
+.conversation__input ::-webkit-scrollbar-thumb {
+  background-color: #7289da; /* Set the color of the scrollbar thumb */
+}
+
+.conversation__input button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #7289da;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.conversation__input button:hover {
+  background-color: #677bc4;
+}
