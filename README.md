@@ -1,6 +1,24 @@
-# Stardew Valley Powered by ChatGPT Agents Demo
+# A Game Demo Powered by ChatGPT Agents
 
-You will need to set up an account with openai and create an api key.
+<p align="center">
+    <img src="https://github.com/liyucheng09/ChatGPT_Agent/blob/master/pics/logo.png" alt="Logo" width="auto" height="160" />
+</p>
+
+# 上手指南
+
+1. 在OpenAI注册账号并创建API密钥。
+2. 在src目录中新建.apikeys.ts文件。
+3. 在此文件中添加 `export const CHATGPT_API_KEY = "复制并粘贴您的API密钥";`。
+4. 运行 `yarn install` 安装依赖。
+5. 运行 `yarn start` 启动应用。
+6. 浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看应用。
+7. 编辑后页面会自动重载。
+8. 控制台会显示任何lint错误。
+
+
+# Details
+
+You will need to an account with openai and create an api key.
 
 Then in the src directory create a new file called .apikeys.ts (make sure not to commit this file or share your
 api key with anyone else)
@@ -48,6 +66,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## ETH Contract
+## Thanks
 
-There are some contract files for blockchain under `contracts/`, do not run them unless you know what do they mean.
+Thanks for [blurrypiano](https://github.com/blurrypiano) for the general framework.
