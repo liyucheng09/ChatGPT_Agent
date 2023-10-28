@@ -99,10 +99,10 @@ export default class ConversationService implements IConversationService {
       return updatedConversation;
     }
 
-    const actionFollowups = ["Tell Brendan to follow you", "You say a farewell", ""]
+    const actionFollowups = ["让悟空跟着你", "你向他告别", ""]
     const promptMsgs: GptMessage[] = [...this.mapToGptMessages(conversation), {
       role: "user",
-      content: `Brendan replies "${replyText}". ${actionFollowups[action.value - 1]}. (Respond with just what your character would say)`,
+      content: `悟空说： "${replyText}". ${actionFollowups[action.value - 1]}. (Respond with just what your character would say)`,
     }];
     const response = await postChatGpt(promptMsgs);
 
@@ -151,7 +151,7 @@ export default class ConversationService implements IConversationService {
   private async summarizeConversation(conversation: IConversationModel, endMessage: string): Promise<string> {
     const promptMsgs: GptMessage[] = [...this.mapToGptMessages(conversation), {
       role: "user",
-      content: `${endMessage}. Write a brief summary of what was just said between you and Brendan, in the 3rd person perspective. Keep it short, but detailed!`,
+      content: `${endMessage}. Write a brief summary of what was just said between you and 悟空, in the 3rd person perspective. Keep it short, but detailed!`,
     }];
 
     // dont include the initial conversation prompt in summary?
@@ -163,7 +163,7 @@ export default class ConversationService implements IConversationService {
   private async validateReply(replyText: string, conversation: IConversationModel): Promise<ChatNumberResponse> {
     const promptMsgs: GptMessage[] = [...this.mapToGptMessages(conversation), {
       role: "user",
-      content: `Brendan replies "${replyText}". Does his response make sense. On this scale of 1 to 5, 
+      content: `悟空 replies "${replyText}". Does his response make sense. On this scale of 1 to 5, 
                 1: Response is non-sensical,
                 2: Response is immersion breaking or meta and acknowledging this is a game,
                 3. Reponse is bad, unnecessarily vulgar for no reason based on the past conversation
@@ -181,10 +181,10 @@ export default class ConversationService implements IConversationService {
   private async getNextAction(replyText: string, conversation: IConversationModel): Promise<ChatNumberResponse> {
     const promptMsgs: GptMessage[] = [...this.mapToGptMessages(conversation), {
       role: "user",
-      content: `Brendan replies "${replyText}". What would you like to do?
-                1: tell Brendan to follow you,
-                2: say a farewell,
-                3: continue the current conversation,
+      content: `悟空 replies "${replyText}". What would you like to do?
+                1: 让悟空跟着你,
+                2: 你向他告别,
+                3: 继续当前对话,
         Pick an action from the list above. respond with just the number for the action`,
     }];
     const response = await postChatGpt(promptMsgs);
@@ -231,7 +231,7 @@ export default class ConversationService implements IConversationService {
     }
     // ${walksUp ? "Brendan walks up to you" : ""}
 
-    const prompt = ` ${timeMsg} at ${envDescription}, What would ${npc.name} say to Brendan? (Keep the response short and just the words your character says)`
+    const prompt = ` ${timeMsg} at ${envDescription}, What would ${npc.name} say to 悟空? (Keep the response short and just the words your character says)`
     const fullPrompt = generalContent + personalContent + prompt;
     console.log(fullPrompt);
     return [{
