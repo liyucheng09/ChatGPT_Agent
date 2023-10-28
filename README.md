@@ -1,7 +1,7 @@
 # A Game Demo Powered by ChatGPT Agents
 
 <p align="center">
-    <img src="https://github.com/liyucheng09/ChatGPT_Agent/blob/master/pics/logo.png" alt="Logo" width="auto" height="160" />
+    <img src="https://github.com/liyucheng09/ChatGPT_Agent/blob/main/pics/logo.png" alt="Logo" width="auto" height="160" />
 </p>
 
 # 上手指南
