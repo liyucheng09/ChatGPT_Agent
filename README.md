@@ -15,6 +15,12 @@
 7. 编辑后页面会自动重载。
 8. 控制台会显示任何lint错误。
 
+**更改故事背景和角色人格：**
+
+- 更改地图信息：`src/backend/data/locationData.ts`
+- 更改NPC人格：`src/backend/data/npcs/NpcData.ts`
+- 更改NPC的Action，prompt等：`src/backend/services/ConversationService.ts`
+
 
 # Details
 
@@ -40,6 +46,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+**Change the story background and character personalities:**
+
+- Modify map information: `src/backend/data/locationData.ts`
+- Modify NPC personalities: `src/backend/data/npcs/NpcData.ts`
+- Modify NPC actions, prompts, etc.: `src/backend/services/ConversationService.ts`
 
 ### `yarn test`
 
